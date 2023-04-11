@@ -11,6 +11,5 @@ function passwordGen() {
   return password;
 }
 
-let securePassword = document.querySelector('body');
-
+let securePassword = document.querySelector('span');
 securePassword.innerHTML = passwordGen();
