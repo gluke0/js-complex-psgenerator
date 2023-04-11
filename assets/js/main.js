@@ -1,10 +1,11 @@
 // caratteri per comporre la password
 let characters = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=/<>?";
+let button = document.querySelector('button');
 
 function passwordGen() {
   let password = [];
   // per gestire la lunghezza
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 20; i++) {
     let index = Math.floor(Math.random() * characters.length);
     password += characters[index];
   }
@@ -12,4 +13,11 @@ function passwordGen() {
 }
 
 let securePassword = document.querySelector('span');
-securePassword.innerHTML = passwordGen();
+
+// generatore al click
+button.addEventListener('click', function(){
+  let newPassword = passwordGen();
+  securePassword.innerHTML = newPassword
+  securePassword.classList.remove('hidden');
+});
+
