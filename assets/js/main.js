@@ -5,7 +5,7 @@ let button = document.querySelector('button');
 function passwordGen() {
   let password = [];
   // per gestire la lunghezza
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 15; i++) {
     let index = Math.floor(Math.random() * characters.length);
     password += characters[index];
   }
